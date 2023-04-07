@@ -41,7 +41,7 @@ class BlogController extends Controller
                 $image->storeAs('public/adminAssets/uploads/blog',$name);
                 $blogData->image = $name;
             }
-            $blogData->status = 1;
+            $blogData->status = 0;
             if($blogData->save()){
                 return response()->json(['ResponseCode'=>1,'ResponseText'=>'Blog Added SuccessFully'],200);
             }else{
